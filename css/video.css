@@ -1,0 +1,36 @@
+.video-banner1{
+    background: #cccccc;
+}
+.video-banner2{
+    background: url("../src/img/shouye_02.jpg") no-repeat;/*不支持image-set*/
+    background-color: rgb(0, 0, 0);
+}
+.video-banner3{
+    background: url("../src/img/shouye_03.jpg") no-repeat;/*不支持image-set*/
+    background-color: rgb(0, 0, 0);
+}
+
+.swiper-pagination-switch{
+    display: inline-block;
+    zoom: 1;
+    margin: 3px 12px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    /*border: 1px solid red;*/
+}
+
+.silder-vertical{
+    width: 20px;
+    padding: 0 10px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    right:10px;
+    margin-left: -260px;
+    top: 370px;
+    text-align: center;
+}
+
