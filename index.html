@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/slide.css">
 </head>
 <body>
 <div class="header theme-white">
@@ -13,109 +14,90 @@
         <div class="nav-wrapper">
             <div class="logo"><a href="#"><img class="logo-img" src="src/img/hiphop-PL_1480401698584_76.png"
                                                alt="touxiang"/></a></div>
-            <div class="title"><span>Teddy Peng</span></div>
+            <div class="title"><a href="index.html" style="" class="selected">Teddy Peng</a></div>
             <ul class="nav-link">
-                <li class="selected"><a href="#">HOME</a></li>
-                <li class=""><a href="#">PERSONAL STATEMENT</a></li>
-                <li class=""><a id="videos" href="videos.html">VIDEOS</a></li>
-                <li class=""><a id="images" href="#">IMAGES</a></li>
-                <li class=""><a id="others" href="#">OTHERS</a></li>
+                <li class=""><a id="ps" href="ps.html">PERSONAL STATEMENT</a></li>
+                <li class=""><a id="videos" href="video.html">VIDEOS</a></li>
+                <li class=""><a id="images" href="images.html">IMAGES</a></li>
+                <li class=""><a id="others" href="others.html">OTHERS</a></li>
             </ul>
+            <div class="language">
+                <span><a href="#">EN</a></span><span><a href="#">简体中文</a></span>
+            </div>
         </div>
     </div>
     <!--轮播图开始-->
-    <div class="silder clearfix">
-        <div class="silder-wrapper">
-            <div class="swipe silder-banner3"></div>
-            <div class="swipe silder-banner1"></div>
-            <div class="swipe silder-banner2"></div>
-            <div class="swipe silder-banner3"></div>
-            <div class="swipe silder-banner1"></div>
-        </div>
+    <!--<div class="silder clearfix">-->
+        <!--<div class="silder-wrapper">-->
+            <!--<div class="swipe silder-banner3"></div>-->
+            <!--<div class="swipe silder-banner1"></div>-->
+            <!--<div class="swipe silder-banner2"></div>-->
+            <!--<div class="swipe silder-banner3"></div>-->
+            <!--<div class="swipe silder-banner1"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+            <li>
+                <a title="" href="#">
+                    <img  alt="" style="background: url(src/img/sample_reel.jpg) no-repeat center;" src="src/images/alpha.png">
+                </a>
+            </li>
+            <li>
+                <a title="" href="#">
+                    <img  alt="" style="background: url(src/img/there%20are%20some%20digital%20img.jpg) no-repeat center;" src="src/images/alpha.png">
+                </a>
+            </li>
+            <li>
+                <a title="" href="#">
+                    <img  alt="" style="background: url(src/img/shouye_03.jpg) no-repeat center;" src="src/images/alpha.png">
+                </a>
+            </li>
+        </ul>
+        <ul class="flex-direction-nav">
+            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+            <li><a class="flex-next" href="javascript:;">Next</a></li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>2</a></li>
+        </ol>
     </div>
-    <!--Statement-->
-    <div class="nav-title">
-        <h1>Personal Statement</h1>
-        <div>
-            <div class="ps-left ps">
 
-            </div>
-            <div class="ps-right ps"></div>
-        </div>
-    </div>
-    <div class="nav-title clearfix">
-        <h1>Videos</h1>
-        <div class="video-silder">
-            <div class="video-slider-wrapper">
-                <div class="video-swipe video1">
-                    <div class="video-left">
-                        <img src="src/img/video1_left.jpg" alt="" class="video1-left">
-                    </div>
-                    <div class="video-right">
-                        <div>
-                            <img src="src/img/457616727059582160.jpg" alt="">
-                        </div>
-                        <div>
-                            <h1>C.A.N.S</h1><span>9'17</span>
-                            <p>This short film is my graduation project, and I spant about nine months to make it. I
-                                served
-                                as a director, animator, characters & scence designer and composition & lighting artist
-                                in
-                                this short film.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-swipe video2">
-                    <div class="video-left">
-                        <img src="src/img/video2_left.jpg" alt="" >
-                    </div>
-                    <div class="video-right">
-                        <div>
-                            <img src="src/img/457616727059582160.jpg" alt="">
-                        </div>
-                        <div>
-                            <h1>C.A.N.S</h1><span>9'17</span>
-                            <p>This short film is my graduation project, and I spant about nine months to make it. I
-                                served
-                                as a director, animator, characters & scence designer and composition & lighting artist
-                                in
-                                this short film.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-swipe video3">
-                    <div class="video-left">
-                        <img src="src/img/su_bg.jpg" alt="" class="">
-                    </div>
-                    <div class="video-right">
-                        <div>
-                            <img src="src/img/457616727059582160.jpg" alt="">
-                        </div>
-                        <div>
-                            <h1>C.A.N.S</h1><span>9'17</span>
-                            <p>This short film is my graduation project, and I spant about nine months to make it. I
-                                served
-                                as a director, animator, characters & scence designer and composition & lighting artist
-                                in
-                                this short film.</p>
-                        </div>
-                    </div>
-                </div>
+    <footer class="page-footer teal">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="#">LJL</a>
             </div>
         </div>
-    </div>
-    <!--Statement-->
-    <div class="nav-title">
-        <h1>Images</h1>
-        <div>
-            <div class="ps-left ps">
+    </footer>
 
-            </div>
-            <div class="ps-right ps"></div>
-        </div>
-    </div>
 </div>
-<script src="lib/global.js"></script>
-<script src="lib/home.js"></script>
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script src="lib/slider.js"></script>
+
+
+<script type="text/javascript">
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 400,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+    })
+</script>
+<!--<script src="lib/global.js"></script>-->
+<!--<script src="lib/home.js"></script>-->
 </body>
 </html>
