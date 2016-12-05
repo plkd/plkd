@@ -4,6 +4,82 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/baguetteBox.css">
+    <style>
+        body {
+            background-color: #666;
+            color: #ddd;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        a, a:visited {
+            color: #97B6D6;
+            text-decoration: none;
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        .gallery img {
+            height: 200px;
+            transition: -webkit-filter .4s, filter .4s;
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+        }
+
+        .gallery img:hover {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
+
+        .gallery a {
+            width: 250px;
+            height: 200px;
+            display: inline-block;
+            overflow: hidden;
+            margin: 4px;
+            box-shadow: 0 0 4px -1px #000;
+        }
+        .gallery .cutter{
+            width: 1320px;
+            height:200px;
+            margin:5px auto;
+            overflow: hidden;
+        }
+
+        .gallery a .flex-prev
+        {
+            width: 70px;
+            height: 70px;
+            line-height: 99em;
+            overflow: hidden;
+            margin: -35px 0 0;
+            display: block;
+            background: url(src/images/ad_ctr.png) no-repeat;
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: all .3s ease;
+            border-radius: 35px;
+        }
+        .flex-direction-nav .flex-prev {
+            left: 0;
+        }
+        .flex-direction-nav .flex-next {
+            right: 0;
+        }
+
+        .cutter-hidden{
+            display: none;
+
+        }
+    </style>
+
 </head>
 <body>
 <div class="header theme-white">
@@ -15,9 +91,9 @@
                                                alt="touxiang"/></a></div>
             <div class="title"><a href="index.html" style="color: #494c4d;">Teddy Peng</a></div>
             <ul class="nav-link">
-                <li class=""><a href="ps.html">PERSONAL STATEMENT</a></li>
+                <li class=""><a href="ps.html">PERSONAL INTRODUCTION</a></li>
                 <li class=""><a id="videos" href="video.html">VIDEOS</a></li>
-                <li ><a id="images" class="selected" href="images.html">IMAGES</a></li>
+                <li><a id="images" class="selected" href="images.html">IMAGES</a></li>
                 <li class=""><a id="others" href="others.html">OTHERS</a></li>
             </ul>
             <div class="language">
@@ -27,13 +103,97 @@
     </div>
 
     <!--Statement-->
-    <div class="clearfix">
-        <div>
-            <div class="ps-left ps">
-
-            </div>
-            <div class="ps-right ps"></div>
+    <div class="sketches">
+        <img src="src/images/sketches/sketches_bg.jpg" style="display: block;margin: 0 auto;" alt="sketches_bg">
+    </div>
+    <div class="baguetteBoxTwo gallery flex-direction-nav">
+        <svg width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 70px;cursor: pointer;">
+            <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
+        </svg>
+        <svg width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 70px;cursor: pointer;">
+            <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
+        </svg>
+        <!--<a class="flex-prev" href="javascript:;" style="width: 70px;height: 70px;float:left;">Previous</a>-->
+        <!--<a class="flex-next" href="javascript:;" style="width: 70px;height: 70px;float: right">Next</a>-->
+        <div class="cutter">
+            <a href="src/images/sketches/sketches_01.jpg" data-at-450="src/images/sketches/sketches_01.jpg"
+               data-at-800="src/images/sketches/sketches_01.jpg" data-at-1366="src/images/sketches/sketches_01.jpg"
+               data-at-1920="src/images/sketches/sketches_01.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_01.jpg"></a>
+            <a href="src/images/sketches/sketches_02.jpg" data-at-450="src/images/sketches/sketches_02.jpg"
+               data-at-800="src/images/sketches/sketches_02.jpg" data-at-1366="src/images/sketches/sketches_02.jpg"
+               data-at-1920="src/images/sketches/sketches_02.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_02.jpg"></a>
+            <a href="src/images/sketches/sketches_03.jpg" data-at-450="src/images/sketches/sketches_03.jpg"
+               data-at-800="src/images/sketches/sketches_03.jpg" data-at-1366="src/images/sketches/sketches_03.jpg"
+               data-at-1920="src/images/sketches/sketches_03.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_03.jpg"></a>
+            <a href="src/images/sketches/sketches_04.jpg" data-at-450="src/images/sketches/sketches_04.jpg"
+               data-at-800="src/images/sketches/sketches_04.jpg" data-at-1366="src/images/sketches/sketches_04.jpg"
+               data-at-1920="src/images/sketches/sketches_04.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_04.jpg"></a>
+            <a href="src/images/sketches/sketches_05.jpg" data-at-450="src/images/sketches/sketches_05.jpg"
+               data-at-800="src/images/sketches/sketches_05.jpg" data-at-1366="src/images/sketches/sketches_05.jpg"
+               data-at-1920="src/images/sketches/sketches_05.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_05.jpg"></a>
         </div>
+        <div class="cutter cutter-hidden">
+            <a href="src/images/sketches/sketches_06.jpg" data-at-450="src/images/sketches/sketches_06.jpg"
+               data-at-800="src/images/sketches/sketches_06.jpg" data-at-1366="src/images/sketches/sketches_06.jpg"
+               data-at-1920="src/images/sketches/sketches_06.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_06.jpg"></a>
+            <a href="src/images/sketches/sketches_07.png" data-at-450="src/images/sketches/sketches_07.png"
+               data-at-800="src/images/sketches/sketches_07.png" data-at-1366="src/images/sketches/sketches_07.png"
+               data-at-1920="src/images/sketches/sketches_07.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_07.jpg"></a>
+            <a href="src/images/sketches/sketches_08.png" data-at-450="src/images/sketches/sketches_08.png"
+               data-at-800="src/images/sketches/sketches_08.png" data-at-1366="src/images/sketches/sketches_08.png"
+               data-at-1920="src/images/sketches/sketches_08.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_08.jpg"></a>
+            <a href="src/images/sketches/sketches_09.jpg" data-at-450="src/images/sketches/sketches_09.jpg"
+               data-at-800="src/images/sketches/sketches_09.jpg" data-at-1366="src/images/sketches/sketches_09.jpg"
+               data-at-1920="src/images/sketches/sketches_09.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_09.jpg"></a>
+            <a href="src/images/sketches/sketches_10.jpg" data-at-450="src/images/sketches/sketches_10.jpg"
+               data-at-800="src/images/sketches/sketches_10.jpg" data-at-1366="src/images/sketches/sketches_10.jpg"
+               data-at-1920="src/images/sketches/sketches_10.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_10.jpg"></a>
+        </div>
+        <div class="cutter cutter-hidden">
+            <a href="src/images/sketches/sketches_11.jpg" data-at-450="src/images/sketches/sketches_11.jpg"
+               data-at-800="src/images/sketches/sketches_11.jpg" data-at-1366="src/images/sketches/sketches_11.jpg"
+               data-at-1920="src/images/sketches/sketches_11.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_11.jpg"></a>
+            <a href="src/images/sketches/sketches_12.png" data-at-450="src/images/sketches/sketches_12.png"
+               data-at-800="src/images/sketches/sketches_12.png" data-at-1366="src/images/sketches/sketches_12.png"
+               data-at-1920="src/images/sketches/sketches_12.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_12.jpg"></a>
+            <a href="src/images/sketches/sketches_13.png" data-at-450="src/images/sketches/sketches_13.png"
+               data-at-800="src/images/sketches/sketches_13.png" data-at-1366="src/images/sketches/sketches_13.png"
+               data-at-1920="src/images/sketches/sketches_13.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_13.jpg"></a>
+            <a href="src/images/sketches/sketches_14.png" data-at-450="src/images/sketches/sketches_14.png"
+               data-at-800="src/images/sketches/sketches_14.png" data-at-1366="src/images/sketches/sketches_14.png"
+               data-at-1920="src/images/sketches/sketches_14.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_14.jpg"></a>
+            <a href="src/images/sketches/sketches_15.png" data-at-450="src/images/sketches/sketches_15.png"
+               data-at-800="src/images/sketches/sketches_15.png" data-at-1366="src/images/sketches/sketches_15.png"
+               data-at-1920="src/images/sketches/sketches_15.png"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_15.jpg"></a>
+        </div>
+        <div class="cutter cutter-hidden">
+            <a href="src/images/sketches/sketches_16.jpg" data-at-450="src/images/sketches/sketches_16.jpg"
+               data-at-800="src/images/sketches/sketches_16.jpg" data-at-1366="src/images/sketches/sketches_16.jpg"
+               data-at-1920="src/images/sketches/sketches_16.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_16.jpg"></a>
+            <a href="src/images/sketches/sketches_17.jpg" data-at-450="src/images/sketches/sketches_17.jpg"
+               data-at-800="src/images/sketches/sketches_17.jpg" data-at-1366="src/images/sketches/sketches_17.jpg"
+               data-at-1920="src/images/sketches/sketches_17.jpg"><img
+                    src="src/images/sketches/thumbs/sketches_thumbs_17.jpg"></a>
+        </div>
+
     </div>
     <footer class="page-footer teal">
         <div class="footer-copyright">
@@ -43,7 +203,16 @@
         </div>
     </footer>
 </div>
-<script src="lib/global.js"></script>
-<script src="lib/home.js"></script>
+
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script src="lib/baguetteBox.js"></script>
+<script>
+    window.onload = function () {
+        baguetteBox.run('.baguetteBoxTwo', {
+            animation: 'fadeIn'
+        });
+
+    };
+</script>
 </body>
 </html>
