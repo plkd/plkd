@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="css/home.css"/>
     <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/video.css">
 </head>
 <body>
 <div class="header theme-white">
@@ -16,7 +17,7 @@
             <div class="title"><a href="index.html" style="color: #494c4d;">Teddy Peng</a></div>
             <ul class="nav-link">
                 <li class=""><a href="ps.html">PERSONAL STATEMENT</a></li>
-                <li ><a id="videos" class="selected" href="javascript:;">VIDEOS</a></li>
+                <li><a id="videos" class="selected" href="javascript:;">VIDEOS</a></li>
                 <li class=""><a id="images" href="images.html">IMAGES</a></li>
                 <li class=""><a id="others" href="others.html">OTHERS</a></li>
             </ul>
@@ -25,90 +26,35 @@
             </div>
         </div>
     </div>
-    <!--<div class="nav-title clearfix">-->
-        <!--<h1>Videos</h1>-->
-        <!--<div class="video-silder">-->
-            <!--<div class="video-slider-wrapper">-->
-                <!--<div class="video-swipe video1">-->
-                    <!--<div class="video-left">-->
-                        <!--<img src="src/img/video1_left.jpg" alt="" class="video1-left">-->
-                    <!--</div>-->
-                    <!--<div class="video-right">-->
-                        <!--<div>-->
-                            <!--<img src="src/img/457616727059582160.jpg" alt="">-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<h1>C.A.N.S</h1><span>9'17</span>-->
-                            <!--<p>This short film is my graduation project, and I spant about nine months to make it. I-->
-                                <!--served-->
-                                <!--as a director, animator, characters & scence designer and composition & lighting artist-->
-                                <!--in-->
-                                <!--this short film.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="video-swipe video2">-->
-                    <!--<div class="video-left">-->
-                        <!--<img src="src/img/video2_left.jpg" alt="" >-->
-                    <!--</div>-->
-                    <!--<div class="video-right">-->
-                        <!--<div>-->
-                            <!--<img src="src/img/457616727059582160.jpg" alt="">-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<h1>C.A.N.S</h1><span>9'17</span>-->
-                            <!--<p>This short film is my graduation project, and I spant about nine months to make it. I-->
-                                <!--served-->
-                                <!--as a director, animator, characters & scence designer and composition & lighting artist-->
-                                <!--in-->
-                                <!--this short film.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="video-swipe video3">-->
-                    <!--<div class="video-left">-->
-                        <!--<img src="src/img/su_bg.jpg" alt="" class="">-->
-                    <!--</div>-->
-                    <!--<div class="video-right">-->
-                        <!--<div>-->
-                            <!--<img src="src/img/457616727059582160.jpg" alt="">-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<h1>C.A.N.S</h1><span>9'17</span>-->
-                            <!--<p>This short film is my graduation project, and I spant about nine months to make it. I-->
-                                <!--served-->
-                                <!--as a director, animator, characters & scence designer and composition & lighting artist-->
-                                <!--in-->
-                                <!--this short film.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+
     <div id="banner_tabs" class="flexslider">
         <ul class="slides">
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="" style="background: url(src/img/shouye_01.jpg) no-repeat center;" src="src/images/alpha.png">
-                </a>
+                <img width="1920" height="482" alt="jieguangji" src="src/img/jieguangji.jpg">
+                <!--<a href="#">-->
+                    <!--<img src="src/img/su_video.jpg" alt="su_video" style="">-->
+                <!--</a>-->
             </li>
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="" style="background: url(src/img/shouye_02.jpg) no-repeat center;" src="src/images/alpha.png">
+                <!--<a title="" href="#" >-->
+                <img width="1920" height="482" alt="trace" style="z-index: 1" src="src/img/su.jpg">
+                <a href="#" style="z-index: 100;">
+                    <img src="src/img/su_video.jpg" alt="su_video" >
                 </a>
+                <!--</a>-->
             </li>
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="" style="background: url(src/img/shouye_03.jpg) no-repeat center;" src="src/images/alpha.png">
-                </a>
+                <!--<a title="" href="#">-->
+                <img width="1920" height="482" alt="cans" src="src/img/cans.jpg">
+                <!--</a>-->
+
             </li>
         </ul>
-        <ul class="flex-direction-nav">
-            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
-            <li><a class="flex-next" href="javascript:;">Next</a></li>
-        </ul>
-        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+        <!--<ul class="flex-direction-nav">-->
+        <!--<li><a class="flex-prev" href="javascript:;">Previous</a></li>-->
+        <!--<li><a class="flex-next" href="javascript:;">Next</a></li>-->
+        <!--</ul>-->
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging" style="">
             <li><a>1</a></li>
             <li><a>2</a></li>
             <li><a>2</a></li>
@@ -127,7 +73,7 @@
 
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         var bannerSlider = new Slider($('#banner_tabs'), {
             time: 5000,
             delay: 400,
@@ -137,13 +83,14 @@
             controller: $('#bannerCtrl'),
             activeControllerCls: 'active'
         });
-        $('#banner_tabs .flex-prev').click(function() {
+        $('#banner_tabs .flex-prev').click(function () {
             bannerSlider.prev()
         });
-        $('#banner_tabs .flex-next').click(function() {
+        $('#banner_tabs .flex-next').click(function () {
             bannerSlider.next()
         });
-    })
+    });
+
 </script>
 
 <!--<script src="lib/global.js"></script>-->
