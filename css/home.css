@@ -47,75 +47,6 @@ table {
     border-spacing: 0;
 }
 
-
-/*轮播图*/
-.silder{
-    /*position: relative;*/
-    /*top: 60px;*/
-    margin-top: 60px;
-}
-.silder-wrapper{
-    overflow: hidden;
-    height: 760px;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-.silder .silder-wrapper .swipe{
-    height: 760px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    box-sizing: content-box;
-    float: left;
-}
-.silder-banner1{
-    background: url("../src/img/shouye_01.jpg") no-repeat;/*不支持image-set*/
-    background-color: rgb(0, 0, 0);
-}
-.silder-banner2{
-    background: url("../src/img/shouye_02.jpg") no-repeat;/*不支持image-set*/
-    background-color: rgb(0, 0, 0);
-}
-.silder-banner3{
-    background: url("../src/img/shouye_03.jpg") no-repeat;/*不支持image-set*/
-    background-color: rgb(0, 0, 0);
-}
-.silder-Clist{
-    width: 500px;
-
-    padding: 0 10px;
-    height: 20px;
-    position: absolute;
-    z-index: 20;
-    left: 50%;
-    margin-left: -260px;
-    bottom: -25%;
-    text-align: center;
-}
-
-.swiper-pagination-switch{
-    display: inline-block;
-    zoom: 1;
-    margin: 3px 8px;
-    width: 42px;
-    height: 3px;
-    background: #fff;
-    cursor: pointer;
-    /*border-radius: 50%;*/
-    /*border: 1px solid red;*/
-}
-
-.theme-white .swiper-pagination-switch{
-    border-color: rgba(26, 26, 26, 0.75);
-    background: rgba(26, 26, 26, 0.75);
-}
-
-.theme-white .pagination-active{
-    background: #808080 ;
-}
-
-
-
 /*导航条*/
 .nav{
     /*position: fixed;*/
@@ -142,7 +73,7 @@ table {
     visibility: hidden;
 }
 .logo{
-    display: inline;
+    display: inline-block;
     float: left;
     padding: 4px 0;
 }
@@ -185,7 +116,7 @@ table {
 }
 
 .nav-link{
-    display: inline;
+    display: inline-block;
     float: right;
     overflow: hidden;
     white-space: nowrap;
@@ -194,10 +125,9 @@ table {
     top: -13px;
 }
 .nav-link>li{
-    display: inline;
+    display: inline-block;
     float: left;
 }
-
 
 .nav-link>li>a {
     display: block;
@@ -221,134 +151,19 @@ table {
     color: #494c4d;
     font-weight: bold;
 }
-.header .toggle{
-    background: #fff;
-}
+
 
 h1{
     font-weight: bold;
     line-height: 3;
 }
-.ps{
-    width: 50%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height:700px;
-}
-.ps-left{
-    background: #cccccc;
-    float: left;
-}
-.ps-right{
-    background: #f5abab;
-    float: right;
-}
 
-.video{
-    /*height: 300px;*/
-    width:100%;
-    background: #ffffff;
-    color: #000;
-    /*position: relative;*/
-    /*top: 88px;*/
-    margin-top: 88px;
-    text-align: center;
-}
-.video-Clist{
-    width: 500px;
-    padding: 0 10px;
-    height: 20px;
-    position: absolute;
-    z-index: 20;
-    left: 50%;
-    margin-left: -260px;
-    bottom: 10px;
-    text-align: center;
-}
-
-.video-pagination-switch{
-    display: inline-block;
-    zoom: 1;
-    margin: 3px 8px;
-    width: 42px;
-    height: 3px;
-    background: #fff;
-    cursor: pointer;
-    /*border-radius: 50%;*/
-    /*border: 1px solid red;*/
-}
-
-.theme-white .video-pagination-switch{
-    border-color: rgba(26, 26, 26, 0.75);
-    background: rgba(26, 26, 26, 0.75);
-}
-
-.theme-white .pagination-active{
-    background: #808080 ;
-}
-.video-silder{
-
-}
-.video-slider-wrapper{
-    overflow: hidden;
-    height: 600px;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-.video-silder .video-slider-wrapper .video-swipe{
-    height: 600px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    box-sizing: content-box;
-    float: left;
-}
-.video1{
-    width:100%;
-    background: url("../src/img/cans_bg.jpg") no-repeat;/*不支持image-set*/
-    overflow: hidden;
-}
-.video2{
-    width:100%;
-    background: url("../src/img/jgj_bg.png") no-repeat;/*不支持image-set*/
-    overflow: hidden;
-}
-.video3{
-    width:100%;
-    background: url("../src/img/su_bg.jpg") no-repeat;/*不支持image-set*/
-    overflow: hidden;
-}
-
-.video-left img{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-    width:48%;
-    height: 600px;
-    margin-right: 1rem;
-}
-.video-right{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-    width:47%;
-}
-.video-right img{
-    width:90%;
-}
 .title a{
     color: #73a9af;
 }
 .title a.selected{
     text-decoration: underline;
 }
-
-
-
-
 
 /*
     footer

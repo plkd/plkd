@@ -2,15 +2,15 @@
     margin: 0 auto ;
     position: relative;
     width: 100%;
-    height: 750px;
+    height: 850px;
     overflow: hidden;
     zoom: 1;
 }
 
-.flexslider .slides li {
-    width: 100%;
-    height: 100%;
-}
+/*.flexslider .slides li {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
 
 .flex-direction-nav a {
     width: 70px;
@@ -89,8 +89,10 @@
 
 .flexslider .slides  img {
     width: 100%;
-    height: 750px;
+    height:100%;
+    /*height: 750px;*/
     display: block;
+    /*position: relative;*/
 }
 
 /*
@@ -113,6 +115,7 @@
     width: 10px;
     border-radius: 50%;
     cursor: pointer;
+    z-index:100;
 }
 
 .video-control-paging li a.flex-active,

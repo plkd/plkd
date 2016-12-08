@@ -27,35 +27,69 @@
         </div>
     </div>
 
-    <div id="banner_tabs" class="flexslider">
+    <div id="banner_tabs" class="flexslider" style="height: 850px;">
         <ul class="slides">
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="jieguangji" src="src/img/jieguangji.jpg">
-                </a>
-                <!--<a href="#">-->
-                <!--<img src="src/img/su_video.jpg" alt="su_video" style="">-->
-                <!--</a>-->
+                    <div class="video-window jieguangji">
+                        <div class="jieguangji-img" >
+                            <img alt="jieguangji" src="src/img/jieguangji_left.jpg">
+                        </div>
+                        <div class="jieguangji-play">
+                            <a target="_blank" href="https://player.vimeo.com/video/194624158"><img src="src/img/jieguangji_play.jpg" alt=""></a>
+                        </div>
+                        <div class="jieguangji-text" style="float: right;position: relative;width: 40%;right: 5%;">
+                            <h1 style="color: #b54536;font-size: 3em;line-height: 2;">FIND THE LIGHT  <span style="color: #8c8c8c;font-size: .5em;">4’55"</span></h1>
+                            <p style="font-size: 2em;">This is my first animation short film,
+                                and I made it in my sophomore year.
+                                In this short film I served as a director,
+                                animator, modeler, sound designer,
+                                characters & scence designer
+                                and shading & lighting artist
+                                in this short film.</p>
+                        </div>
+                    </div>
             </li>
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="trace" style="z-index: 1" src="src/img/su.jpg">
-                    <!--<a href="#" style="z-index: 100;">-->
-                    <!--<img src="src/img/su_video.jpg" alt="su_video" >-->
-                </a>
-                <!--</a>-->
+                    <div class="video-window trace">
+                        <div class="trace-play">
+                            <a target="_blank" href="https://player.vimeo.com/video/192464930"><img src="src/img/trace_play.jpg" alt=""></a>
+                        </div>
+                        <div class="trace-img">
+                            <img alt="trace" src="src/img/trace_left.jpg">
+                        </div>
+                        <div class="trace-text" style="float: right;position: relative;width: 31%;right: 4%;margin-top: -9%">
+                            <h1 style="color: #b54536;font-size: 5em;line-height: 2;">TRACE  <span style="color: #8c8c8c;font-size: .5em;">1’00"</span></h1>
+                            <p style="font-size: 2em;color: #ffffff;;">This is my second animation
+                                short film,
+                                and I made it when in my junior year.
+                                I served as a director, animator,
+                                characters & scence designer
+                                and shading & lighting artist
+                                in this short film.</p>
+                        </div>
+                    </div>
             </li>
             <li>
-                <a title="" href="#">
-                    <img width="1920" height="482" alt="cans" src="src/img/cans.jpg">
-                </a>
-
+                    <div class="video-window cans">
+                        <div class="cans-play">
+                            <a target="_blank" href="https://player.vimeo.com/video/192601903"><img src="src/img/cans_play.jpg" alt=""></a>
+                        </div>
+                        <div class="cans-img">
+                            <img alt="cans" src="src/img/cans_left.jpg">
+                        </div>
+                    </div>
+                    <div class="cans-text" style="float: right;position: relative;width: 38%;margin-top: -30%;right: 7%;">
+                        <h1 style="color: #8c8c8c;font-size: 5em;line-height: 2;">C.A.N.S  <span style="color: #8c8c8c;font-size: .5em;">9’17"</span></h1>
+                        <p style="font-size: 2em;color: #ffffff;;">This short film is my graduation project,
+                            and I spant about nine months to make it.
+                            I served as a director, storyboard artist，
+                            animator, characters & scence designer
+                            and compositing & lighting artist
+                            in this short film.</p>
+                    </div>
             </li>
         </ul>
-        <!--<ul class="flex-direction-nav">-->
-        <!--<li><a class="flex-prev" href="javascript:;">Previous</a></li>-->
-        <!--<li><a class="flex-next" href="javascript:;">Next</a></li>-->
-        <!--</ul>-->
+
         <ol id="bannerCtrl" class="flex-control-nav flex-control-paging" style="">
             <li><a>1</a></li>
             <li><a>2</a></li>
@@ -75,23 +109,23 @@
 
 
 <script type="text/javascript">
-    $(function () {
-        var bannerSlider = new Slider($('#banner_tabs'), {
-            time: 5000,
-            delay: 400,
-            event: 'hover',
-            auto: true,
-            mode: 'fade',
-            controller: $('#bannerCtrl'),
-            activeControllerCls: 'active'
+        $(function () {
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 5000,
+                delay: 400,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+            $('#banner_tabs .flex-prev').click(function () {
+                bannerSlider.prev()
+            });
+            $('#banner_tabs .flex-next').click(function () {
+                bannerSlider.next()
+            });
         });
-        $('#banner_tabs .flex-prev').click(function () {
-            bannerSlider.prev()
-        });
-        $('#banner_tabs .flex-next').click(function () {
-            bannerSlider.next()
-        });
-    });
 
 </script>
 
