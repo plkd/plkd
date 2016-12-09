@@ -47,7 +47,7 @@
     /*top:-80%;*/
     /*top:0;*/
     /*right:0;*/
-    height: 850px;
+    /*height: 850px;*/
     overflow: hidden;
 
 }
@@ -77,6 +77,14 @@
     width:40%;
     right:5%;
 }
+.jieguangji-text{
+    width:40%;
+    position: relative;
+    display: inline-block;
+    float: right;
+    right:6%;
+    top:2%;
+}
 
 .trace{
     background: url(../src/img/trace_bg.jpg) no-repeat center;
@@ -95,6 +103,13 @@
     margin-top: 1%;
     float: left;
     width:63%;
+}
+.trace-text{
+    position: relative;
+    display: inline-block;
+    float: right;
+    width:37%;
+    margin-top:10%;
 }
 
 .cans{
@@ -118,4 +133,34 @@
     float: right;
     width:40%;
     right:5%;
+}
+.cans-text{
+    position: relative;
+    display: inline-block;
+    float: right;
+    width:43%;
+    right:4%;
+    top:2%;
+}
+@media screen and (max-width:2100px)  {
+    .flexslider{
+        height: 976px;
+    }
+}
+@media screen and (max-width: 1600px) and (min-width:1367px){
+    .flexslider{
+        height: 806px;
+    }
+    /*.trace-text{*/
+        /*position: relative;*/
+        /*display: inline-block;*/
+        /*float: right;*/
+        /*width:37%;*/
+        /*top:-29%;*/
+    /*}*/
+}
+@media screen and (max-width: 1366px) {
+    .flexslider{
+        height: 686px;
+    }
 }
