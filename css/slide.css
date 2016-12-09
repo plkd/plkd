@@ -7,10 +7,10 @@
     zoom: 1;
 }
 
-/*.flexslider .slides li {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
+.flexslider .slides li {
+    width: 100%;
+    height: 100%;
+}
 
 .flex-direction-nav a {
     width: 70px;
