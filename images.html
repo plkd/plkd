@@ -42,44 +42,22 @@
             margin: 4px;
             box-shadow: 0 0 4px -1px #000;
         }
+
         .gallery .cutter{
-            width: 1320px;
+            /*width: 1320px;*/
             height:200px;
             margin:5px auto;
             overflow: hidden;
         }
-
-        .gallery a .flex-prev
-        {
-            width: 70px;
-            height: 70px;
-            line-height: 99em;
-            overflow: hidden;
-            margin: -35px 0 0;
-            display: block;
-            background: url(src/images/ad_ctr.png) no-repeat;
-            position: absolute;
-            top: 50%;
-            z-index: 10;
-            cursor: pointer;
-            opacity: 0;
-            filter: alpha(opacity=0);
-            -webkit-transition: all .3s ease;
-            border-radius: 35px;
-        }
-        .flex-direction-nav .flex-prev {
-            left: 0;
-        }
-        .flex-direction-nav .flex-next {
-            right: 0;
-        }
-
-        .cutter-hidden{
+        .gallery .cutter  .cutter-hidden {
+            width:0;
+            height:0;
             display: none;
-
+            transition: all 1s ;
         }
-    </style>
 
+
+    </style>
 </head>
 <body>
 <div class="header theme-white">
@@ -102,22 +80,20 @@
         </div>
     </div>
 
-    <!--Statement-->
+    <!--sketches-->
     <div class="sketches">
         <img src="src/images/sketches/sketches_bg.jpg" style="display: block;margin: 0 auto;" alt="sketches_bg">
     </div>
-    <div class="baguetteBoxTwo gallery flex-direction-nav">
-        <svg width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 70px;cursor: pointer;">
+    <div class="baguetteBoxOne gallery ">
+        <svg class="sketches-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 70px;cursor: pointer;">
+        <svg class="sketches-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
-        <!--<a class="flex-prev" href="javascript:;" style="width: 70px;height: 70px;float:left;">Previous</a>-->
-        <!--<a class="flex-next" href="javascript:;" style="width: 70px;height: 70px;float: right">Next</a>-->
-        <div class="cutter">
+        <div class="cutter" id="sketches">
             <a href="src/images/sketches/sketches_01.jpg" data-at-450="src/images/sketches/sketches_01.jpg"
                data-at-800="src/images/sketches/sketches_01.jpg" data-at-1366="src/images/sketches/sketches_01.jpg"
                data-at-1920="src/images/sketches/sketches_01.jpg"><img
@@ -138,8 +114,6 @@
                data-at-800="src/images/sketches/sketches_05.jpg" data-at-1366="src/images/sketches/sketches_05.jpg"
                data-at-1920="src/images/sketches/sketches_05.jpg"><img
                     src="src/images/sketches/thumbs/sketches_thumbs_05.jpg"></a>
-        </div>
-        <div class="cutter cutter-hidden">
             <a href="src/images/sketches/sketches_06.jpg" data-at-450="src/images/sketches/sketches_06.jpg"
                data-at-800="src/images/sketches/sketches_06.jpg" data-at-1366="src/images/sketches/sketches_06.jpg"
                data-at-1920="src/images/sketches/sketches_06.jpg"><img
@@ -160,8 +134,6 @@
                data-at-800="src/images/sketches/sketches_10.jpg" data-at-1366="src/images/sketches/sketches_10.jpg"
                data-at-1920="src/images/sketches/sketches_10.jpg"><img
                     src="src/images/sketches/thumbs/sketches_thumbs_10.jpg"></a>
-        </div>
-        <div class="cutter cutter-hidden">
             <a href="src/images/sketches/sketches_11.jpg" data-at-450="src/images/sketches/sketches_11.jpg"
                data-at-800="src/images/sketches/sketches_11.jpg" data-at-1366="src/images/sketches/sketches_11.jpg"
                data-at-1920="src/images/sketches/sketches_11.jpg"><img
@@ -182,8 +154,6 @@
                data-at-800="src/images/sketches/sketches_15.png" data-at-1366="src/images/sketches/sketches_15.png"
                data-at-1920="src/images/sketches/sketches_15.png"><img
                     src="src/images/sketches/thumbs/sketches_thumbs_15.jpg"></a>
-        </div>
-        <div class="cutter cutter-hidden">
             <a href="src/images/sketches/sketches_16.jpg" data-at-450="src/images/sketches/sketches_16.jpg"
                data-at-800="src/images/sketches/sketches_16.jpg" data-at-1366="src/images/sketches/sketches_16.jpg"
                data-at-1920="src/images/sketches/sketches_16.jpg"><img
@@ -193,8 +163,293 @@
                data-at-1920="src/images/sketches/sketches_17.jpg"><img
                     src="src/images/sketches/thumbs/sketches_thumbs_17.jpg"></a>
         </div>
-
     </div>
+
+    <div class="photo">
+        <img src="src/images/photo/photo_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+    </div>
+    <div class="baguetteBoxTwo gallery ">
+        <svg class="photo-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+            <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
+        </svg>
+        <svg class="photo-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+            <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
+        </svg>
+        <div class="cutter" id="photo">
+            <a href="src/images/photo/photo_01.jpg" data-at-450="src/images/photo/photo_01.jpg"
+               data-at-800="src/images/photo/photo_01.jpg" data-at-1366="src/images/photo/photo_01.jpg"
+               data-at-1920="src/images/photo/photo_01.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_01.jpg"></a>
+            <a href="src/images/photo/photo_02.jpg" data-at-450="src/images/photo/photo_02.jpg"
+               data-at-800="src/images/photo/photo_02.jpg" data-at-1366="src/images/photo/photo_02.jpg"
+               data-at-1920="src/images/photo/photo_02.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_02.jpg"></a>
+            <a href="src/images/photo/photo_03.jpg" data-at-450="src/images/photo/photo_03.jpg"
+               data-at-800="src/images/photo/photo_03.jpg" data-at-1366="src/images/photo/photo_03.jpg"
+               data-at-1920="src/images/photo/photo_03.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_03.jpg"></a>
+            <a href="src/images/photo/photo_04.jpg" data-at-450="src/images/photo/photo_04.jpg"
+               data-at-800="src/images/photo/photo_04.jpg" data-at-1366="src/images/photo/photo_04.jpg"
+               data-at-1920="src/images/photo/photo_04.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_04.jpg"></a>
+            <a href="src/images/photo/photo_05.jpg" data-at-450="src/images/photo/photo_05.jpg"
+               data-at-800="src/images/photo/photo_05.jpg" data-at-1366="src/images/photo/photo_05.jpg"
+               data-at-1920="src/images/photo/photo_05.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_05.jpg"></a>
+            <a href="src/images/photo/photo_06.jpg" data-at-450="src/images/photo/photo_06.jpg"
+               data-at-800="src/images/photo/photo_06.jpg" data-at-1366="src/images/photo/photo_06.jpg"
+               data-at-1920="src/images/photo/photo_06.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_06.jpg"></a>
+            <a href="src/images/photo/photo_07.jpg" data-at-450="src/images/photo/photo_07.jpg"
+               data-at-800="src/images/photo/photo_07.jpg" data-at-1366="src/images/photo/photo_07.jpg"
+               data-at-1920="src/images/photo/photo_07.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_07.jpg"></a>
+            <a href="src/images/photo/photo_08.jpg" data-at-450="src/images/photo/photo_08.jpg"
+               data-at-800="src/images/photo/photo_08.jpg" data-at-1366="src/images/photo/photo_08.jpg"
+               data-at-1920="src/images/photo/photo_08.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_08.jpg"></a>
+            <a href="src/images/photo/photo_09.jpg" data-at-450="src/images/photo/photo_09.jpg"
+               data-at-800="src/images/photo/photo_09.jpg" data-at-1366="src/images/photo/photo_09.jpg"
+               data-at-1920="src/images/photo/photo_09.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_09.jpg"></a>
+            <a href="src/images/photo/photo_10.jpg" data-at-450="src/images/photo/photo_10.jpg"
+               data-at-800="src/images/photo/photo_10.jpg" data-at-1366="src/images/photo/photo_10.jpg"
+               data-at-1920="src/images/photo/photo_10.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_10.jpg"></a>
+            <a href="src/images/photo/photo_11.jpg" data-at-450="src/images/photo/photo_11.jpg"
+               data-at-800="src/images/photo/photo_11.jpg" data-at-1366="src/images/photo/photo_11.jpg"
+               data-at-1920="src/images/photo/photo_11.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_11.jpg"></a>
+            <a href="src/images/photo/photo_12.jpg" data-at-450="src/images/photo/photo_12.jpg"
+               data-at-800="src/images/photo/photo_12.jpg" data-at-1366="src/images/photo/photo_12.jpg"
+               data-at-1920="src/images/photo/photo_12.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_12.jpg"></a>
+            <a href="src/images/photo/photo_13.jpg" data-at-450="src/images/photo/photo_13.jpg"
+               data-at-800="src/images/photo/photo_13.jpg" data-at-1366="src/images/photo/photo_13.jpg"
+               data-at-1920="src/images/photo/photo_13.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_13.jpg"></a>
+            <a href="src/images/photo/photo_14.jpg" data-at-450="src/images/photo/photo_14.jpg"
+               data-at-800="src/images/photo/photo_14.jpg" data-at-1366="src/images/photo/photo_14.jpg"
+               data-at-1920="src/images/photo/photo_14.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_14.jpg"></a>
+            <a href="src/images/photo/photo_15.jpg" data-at-450="src/images/photo/photo_15.jpg"
+               data-at-800="src/images/photo/photo_15.jpg" data-at-1366="src/images/photo/photo_15.jpg"
+               data-at-1920="src/images/photo/photo_15.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_15.jpg"></a>
+            <a href="src/images/photo/photo_16.jpg" data-at-450="src/images/photo/photo_16.jpg"
+               data-at-800="src/images/photo/photo_16.jpg" data-at-1366="src/images/photo/photo_16.jpg"
+               data-at-1920="src/images/photo/photo_16.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_16.jpg"></a>
+            <a href="src/images/photo/photo_17.jpg" data-at-450="src/images/photo/photo_17.jpg"
+               data-at-800="src/images/photo/photo_17.jpg" data-at-1366="src/images/photo/photo_17.jpg"
+               data-at-1920="src/images/photo/photo_17.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_17.jpg"></a>
+            <a href="src/images/photo/photo_18.jpg" data-at-450="src/images/photo/photo_18.jpg"
+               data-at-800="src/images/photo/photo_18.jpg" data-at-1366="src/images/photo/photo_18.jpg"
+               data-at-1920="src/images/photo/photo_18.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_18.jpg"></a>
+            <a href="src/images/photo/photo_19.jpg" data-at-450="src/images/photo/photo_19.jpg"
+               data-at-800="src/images/photo/photo_19.jpg" data-at-1366="src/images/photo/photo_19.jpg"
+               data-at-1920="src/images/photo/photo_19.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_19.jpg"></a>
+            <a href="src/images/photo/photo_20.jpg" data-at-450="src/images/photo/photo_20.jpg"
+               data-at-800="src/images/photo/photo_20.jpg" data-at-1366="src/images/photo/photo_20.jpg"
+               data-at-1920="src/images/photo/photo_20.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_20.jpg"></a>
+            <a href="src/images/photo/photo_21.jpg" data-at-450="src/images/photo/photo_21.jpg"
+               data-at-800="src/images/photo/photo_21.jpg" data-at-1366="src/images/photo/photo_21.jpg"
+               data-at-1920="src/images/photo/photo_21.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_21.jpg"></a>
+            <a href="src/images/photo/photo_22.jpg" data-at-450="src/images/photo/photo_22.jpg"
+               data-at-800="src/images/photo/photo_22.jpg" data-at-1366="src/images/photo/photo_22.jpg"
+               data-at-1920="src/images/photo/photo_22.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_22.jpg"></a>
+            <a href="src/images/photo/photo_23.jpg" data-at-450="src/images/photo/photo_23.jpg"
+               data-at-800="src/images/photo/photo_23.jpg" data-at-1366="src/images/photo/photo_23.jpg"
+               data-at-1920="src/images/photo/photo_23.jpg"><img
+                    src="src/images/photo/thumbs/photo_thumbs_23.jpg"></a>
+        </div>
+    </div>
+
+    <div class="render">
+        <img src="src/images/render/render_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+    </div>
+    <div class="baguetteBoxThree gallery ">
+        <svg class="render-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+            <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
+        </svg>
+        <svg class="render-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+            <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
+        </svg>
+        <div class="cutter" id="render">
+            <a href="src/images/render/render_01.png" data-at-450="src/images/render/render_01.png"
+               data-at-800="src/images/render/render_01.png" data-at-1366="src/images/render/render_01.png"
+               data-at-1920="src/images/render/render_01.png"><img
+                    src="src/images/render/thumbs/render_thumbs_01.png"></a>
+            <a href="src/images/render/render_02.jpg" data-at-450="src/images/render/render_02.jpg"
+               data-at-800="src/images/render/render_02.jpg" data-at-1366="src/images/render/render_02.jpg"
+               data-at-1920="src/images/render/render_02.jpg"><img
+                    src="src/images/render/thumbs/render_thumbs_02.jpg"></a>
+            <a href="src/images/render/render_03.jpg" data-at-450="src/images/render/render_03.jpg"
+               data-at-800="src/images/render/render_03.jpg" data-at-1366="src/images/render/render_03.jpg"
+               data-at-1920="src/images/render/render_03.jpg"><img
+                    src="src/images/render/thumbs/render_thumbs_03.jpg"></a>
+            <a href="src/images/render/render_04.png" data-at-450="src/images/render/render_04.png"
+               data-at-800="src/images/render/render_04.png" data-at-1366="src/images/render/render_04.png"
+               data-at-1920="src/images/render/render_04.png"><img
+                    src="src/images/render/thumbs/render_thumbs_04.jpg"></a>
+            <a href="src/images/render/render_05.jpg" data-at-450="src/images/render/render_05.jpg"
+               data-at-800="src/images/render/render_05.jpg" data-at-1366="src/images/render/render_05.jpg"
+               data-at-1920="src/images/render/render_05.jpg"><img
+                    src="src/images/render/thumbs/render_thumbs_05.jpg"></a>
+        </div>
+    </div>
+
+    <div class="mirror">
+        <img src="src/images/mirror/mirror_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+    </div>
+    <div class="baguetteBoxFour gallery ">
+        <svg class="mirror-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+            <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
+        </svg>
+        <svg class="mirror-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+            <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
+        </svg>
+        <div class="cutter" id="mirror">
+            <a href="src/images/mirror/mirror_01.jpg" data-at-450="src/images/mirror/mirror_01.jpg"
+               data-at-800="src/images/mirror/mirror_01.jpg" data-at-1366="src/images/mirror/mirror_01.jpg"
+               data-at-1920="src/images/mirror/mirror_01.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_01.jpg"></a>
+            <a href="src/images/mirror/mirror_02.jpg" data-at-450="src/images/mirror/mirror_02.jpg"
+               data-at-800="src/images/mirror/mirror_02.jpg" data-at-1366="src/images/mirror/mirror_02.jpg"
+               data-at-1920="src/images/mirror/mirror_02.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_02.jpg"></a>
+            <a href="src/images/mirror/mirror_03.jpg" data-at-450="src/images/mirror/mirror_03.jpg"
+               data-at-800="src/images/mirror/mirror_03.jpg" data-at-1366="src/images/mirror/mirror_03.jpg"
+               data-at-1920="src/images/mirror/mirror_03.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_03.jpg"></a>
+            <a href="src/images/mirror/mirror_04.jpg" data-at-450="src/images/mirror/mirror_04.jpg"
+               data-at-800="src/images/mirror/mirror_04.jpg" data-at-1366="src/images/mirror/mirror_04.jpg"
+               data-at-1920="src/images/mirror/mirror_04.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_04.jpg"></a>
+            <a href="src/images/mirror/mirror_05.jpg" data-at-450="src/images/mirror/mirror_05.jpg"
+               data-at-800="src/images/mirror/mirror_05.jpg" data-at-1366="src/images/mirror/mirror_05.jpg"
+               data-at-1920="src/images/mirror/mirror_05.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_05.jpg"></a>
+            <a href="src/images/mirror/mirror_06.jpg" data-at-450="src/images/mirror/mirror_06.jpg"
+               data-at-800="src/images/mirror/mirror_06.jpg" data-at-1366="src/images/mirror/mirror_06.jpg"
+               data-at-1920="src/images/mirror/mirror_06.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_06.jpg"></a>
+            <a href="src/images/mirror/mirror_07.jpg" data-at-450="src/images/mirror/mirror_07.jpg"
+               data-at-800="src/images/mirror/mirror_07.jpg" data-at-1366="src/images/mirror/mirror_07.jpg"
+               data-at-1920="src/images/mirror/mirror_07.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_07.jpg"></a>
+            <a href="src/images/mirror/mirror_08.jpg" data-at-450="src/images/mirror/mirror_08.jpg"
+               data-at-800="src/images/mirror/mirror_08.jpg" data-at-1366="src/images/mirror/mirror_08.jpg"
+               data-at-1920="src/images/mirror/mirror_08.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_08.jpg"></a>
+            <a href="src/images/mirror/mirror_09.jpg" data-at-450="src/images/mirror/mirror_09.jpg"
+               data-at-800="src/images/mirror/mirror_09.jpg" data-at-1366="src/images/mirror/mirror_09.jpg"
+               data-at-1920="src/images/mirror/mirror_09.jpg"><img
+                    src="src/images/mirror/thumbs/mirror_thumbs_09.jpg"></a>
+        </div>
+    </div>
+
+    <div class="digital">
+        <img src="src/images/render/render_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+    </div>
+    <div class="baguetteBoxFive gallery ">
+        <svg class="digital-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+            <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
+        </svg>
+        <svg class="digital-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+            <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
+        </svg>
+        <div class="cutter" id="digital">
+            <a href="src/images/digital/digital_01.jpg" data-at-450="src/images/digital/digital_01.jpg"
+               data-at-800="src/images/digital/digital_01.jpg" data-at-1366="src/images/digital/digital_01.jpg"
+               data-at-1920="src/images/digital/digital_01.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_01.jpg"></a>
+            <a href="src/images/digital/digital_02.jpg" data-at-450="src/images/digital/digital_02.jpg"
+               data-at-800="src/images/digital/digital_02.jpg" data-at-1366="src/images/digital/digital_02.jpg"
+               data-at-1920="src/images/digital/digital_02.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_02.jpg"></a>
+            <a href="src/images/digital/digital_03.jpg" data-at-450="src/images/digital/digital_03.jpg"
+               data-at-800="src/images/digital/digital_03.jpg" data-at-1366="src/images/digital/digital_03.jpg"
+               data-at-1920="src/images/digital/digital_03.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_03.jpg"></a>
+            <a href="src/images/digital/digital_04.jpg" data-at-450="src/images/digital/digital_04.jpg"
+               data-at-800="src/images/digital/digital_04.jpg" data-at-1366="src/images/digital/digital_04.jpg"
+               data-at-1920="src/images/digital/digital_04.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_04.jpg"></a>
+            <a href="src/images/digital/digital_05.jpg" data-at-450="src/images/digital/digital_05.jpg"
+               data-at-800="src/images/digital/digital_05.jpg" data-at-1366="src/images/digital/digital_05.jpg"
+               data-at-1920="src/images/digital/digital_05.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_05.jpg"></a>
+            <a href="src/images/digital/digital_06.jpg" data-at-450="src/images/digital/digital_06.jpg"
+               data-at-800="src/images/digital/digital_06.jpg" data-at-1366="src/images/digital/digital_06.jpg"
+               data-at-1920="src/images/digital/digital_06.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_06.jpg"></a>
+            <a href="src/images/digital/digital_07.png" data-at-450="src/images/digital/digital_07.png"
+               data-at-800="src/images/digital/digital_07.png" data-at-1366="src/images/digital/digital_07.png"
+               data-at-1920="src/images/digital/digital_07.png"><img
+                    src="src/images/digital/thumbs/digital_thumbs_07.jpg"></a>
+            <a href="src/images/digital/digital_08.jpg" data-at-450="src/images/digital/digital_08.jpg"
+               data-at-800="src/images/digital/digital_08.jpg" data-at-1366="src/images/digital/digital_08.jpg"
+               data-at-1920="src/images/digital/digital_08.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_08.jpg"></a>
+            <a href="src/images/digital/digital_09.jpg" data-at-450="src/images/digital/digital_09.jpg"
+               data-at-800="src/images/digital/digital_09.jpg" data-at-1366="src/images/digital/digital_09.jpg"
+               data-at-1920="src/images/digital/digital_09.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_09.jpg"></a>
+            <a href="src/images/digital/digital_10.JPG" data-at-450="src/images/digital/digital_10.JPG"
+               data-at-800="src/images/digital/digital_10.JPG" data-at-1366="src/images/digital/digital_10.JPG"
+               data-at-1920="src/images/digital/digital_10.JPG"><img
+                    src="src/images/digital/thumbs/digital_thumbs_10.jpg"></a>
+            <a href="src/images/digital/digital_11.jpg" data-at-450="src/images/digital/digital_11.jpg"
+               data-at-800="src/images/digital/digital_11.jpg" data-at-1366="src/images/digital/digital_11.jpg"
+               data-at-1920="src/images/digital/digital_11.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_11.jpg"></a>
+            <a href="src/images/digital/digital_12.jpg" data-at-450="src/images/digital/digital_12.jpg"
+               data-at-800="src/images/digital/digital_12.jpg" data-at-1366="src/images/digital/digital_12.jpg"
+               data-at-1920="src/images/digital/digital_12.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_12.jpg"></a>
+            <a href="src/images/digital/digital_13.jpg" data-at-450="src/images/digital/digital_13.jpg"
+               data-at-800="src/images/digital/digital_13.jpg" data-at-1366="src/images/digital/digital_13.jpg"
+               data-at-1920="src/images/digital/digital_13.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_13.jpg"></a>
+            <a href="src/images/digital/digital_14.jpg" data-at-450="src/images/digital/digital_14.jpg"
+               data-at-800="src/images/digital/digital_14.jpg" data-at-1366="src/images/digital/digital_14.jpg"
+               data-at-1920="src/images/digital/digital_14.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_14.jpg"></a>
+            <a href="src/images/digital/digital_15.jpg" data-at-450="src/images/digital/digital_15.jpg"
+               data-at-800="src/images/digital/digital_15.jpg" data-at-1366="src/images/digital/digital_15.jpg"
+               data-at-1920="src/images/digital/digital_15.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_15.jpg"></a>
+            <a href="src/images/digital/digital_16.jpg" data-at-450="src/images/digital/digital_16.jpg"
+               data-at-800="src/images/digital/digital_16.jpg" data-at-1366="src/images/digital/digital_16.jpg"
+               data-at-1920="src/images/digital/digital_16.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_16.jpg"></a>
+            <a href="src/images/digital/digital_17.jpg" data-at-450="src/images/digital/digital_17.jpg"
+               data-at-800="src/images/digital/digital_17.jpg" data-at-1366="src/images/digital/digital_17.jpg"
+               data-at-1920="src/images/digital/digital_17.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_17.jpg"></a>
+            <a href="src/images/digital/digital_18.jpg" data-at-450="src/images/digital/digital_18.jpg"
+               data-at-800="src/images/digital/digital_18.jpg" data-at-1366="src/images/digital/digital_18.jpg"
+               data-at-1920="src/images/digital/digital_18.jpg"><img
+                    src="src/images/digital/thumbs/digital_thumbs_18.jpg"></a>
+        </div>
+    </div>
+
+
     <footer class="page-footer teal">
         <div class="footer-copyright">
             <div class="container">
@@ -206,9 +461,22 @@
 
 <script src="lib/jquery-1.10.2.min.js"></script>
 <script src="lib/baguetteBox.js"></script>
+<script src="lib/pages.js"></script>
 <script>
     window.onload = function () {
+        baguetteBox.run('.baguetteBoxOne', {
+            animation: 'fadeIn'
+        });
         baguetteBox.run('.baguetteBoxTwo', {
+            animation: 'fadeIn'
+        });
+        baguetteBox.run('.baguetteBoxThree', {
+            animation: 'fadeIn'
+        });
+        baguetteBox.run('.baguetteBoxFour', {
+            animation: 'fadeIn'
+        });
+        baguetteBox.run('.baguetteBoxFive', {
             animation: 'fadeIn'
         });
 
