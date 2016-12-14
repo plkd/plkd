@@ -20,10 +20,13 @@
 
         .gallery {
             text-align: center;
+            margin:14px auto;
+            /*background: url(src/images/images_bg.jpg);*/
+
         }
 
         .gallery img {
-            height: 200px;
+            height: 220px;
             transition: -webkit-filter .4s, filter .4s;
             filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
@@ -36,7 +39,7 @@
 
         .gallery a {
             width: 250px;
-            height: 200px;
+            height: 220px;
             display: inline-block;
             overflow: hidden;
             margin: 4px;
@@ -45,8 +48,8 @@
 
         .gallery .cutter{
             /*width: 1320px;*/
-            height:200px;
-            margin:5px auto;
+            height:230px;
+            /*margin:5px auto;*/
             overflow: hidden;
         }
         .gallery .cutter  .cutter-hidden {
@@ -79,9 +82,9 @@
             </div>
         </div>
     </div>
-
+<div style="background:url(src/images/images_bg.jpg)  bottom;">
     <!--sketches-->
-    <div class="sketches">
+    <div class="sketches" style="">
         <img src="src/images/sketches/sketches_bg.jpg" style="display: block;margin: 0 auto;" alt="sketches_bg">
     </div>
     <div class="baguetteBoxOne gallery ">
@@ -310,7 +313,7 @@
     </div>
 
     <div class="mirror">
-        <img src="src/images/mirror/mirror_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+        <img src="src/images/mirror/mirror_bg.jpg" style="display: block;margin: 0 auto;"  alt="photo_bg">
     </div>
     <div class="baguetteBoxFour gallery ">
         <svg class="mirror-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
@@ -364,7 +367,7 @@
     <div class="digital">
         <img src="src/images/digital/digital_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
     </div>
-    <div class="baguetteBoxFive gallery ">
+    <div class="baguetteBoxFive gallery " style="margin: 0;padding: 14px 0;">
         <svg class="digital-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
@@ -448,8 +451,7 @@
                     src="src/images/digital/thumbs/digital_thumbs_18.jpg"></a>
         </div>
     </div>
-
-
+</div>
     <footer class="page-footer teal">
         <div class="footer-copyright">
             <div class="container">
