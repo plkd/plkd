@@ -20,9 +20,9 @@
 
         .gallery {
             text-align: center;
-            margin:14px auto;
+            margin:25px auto;
             /*background: url(src/images/images_bg.jpg);*/
-
+            /*background:url(src/images/images_bg.jpg)  bottom;*/
         }
 
         .gallery img {
@@ -59,7 +59,25 @@
             transition: all 1s ;
         }
 
-
+        .image-head{
+            display: block;
+            margin: 0 auto;
+            width:100%;
+        }
+        .btn-left{
+            float: left;
+            position: relative;
+            top: 90px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .btn-right{
+            float: right;
+            position: relative;
+            top: 90px;
+            right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -82,17 +100,24 @@
             </div>
         </div>
     </div>
-<div style="background:url(src/images/images_bg.jpg)  bottom;">
+<div style="
+  background-image:url(src/images/images_bg.jpg);
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -moz-border-image: url(src/images/images_bg.jpg) 0;
+    margin: 0 auto;" id="image-wrapper">
     <!--sketches-->
-    <div class="sketches" style="">
-        <img src="src/images/sketches/sketches_bg.jpg" style="display: block;margin: 0 auto;" alt="sketches_bg">
+    <div class="sketches" >
+        <img src="src/images/sketches/sketches_bg.jpg"  class="image-head" alt="sketches_bg">
     </div>
-    <div class="baguetteBoxOne gallery ">
-        <svg class="sketches-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+    <div class="baguetteBoxOne gallery " >
+        <svg class="sketches-btn btn-left" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg class="sketches-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+        <svg class="sketches-btn btn-right" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
@@ -169,14 +194,14 @@
     </div>
 
     <div class="photo">
-        <img src="src/images/photo/photo_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+        <img src="src/images/photo/photo_bg.jpg"  class="image-head" alt="photo_bg">
     </div>
     <div class="baguetteBoxTwo gallery ">
-        <svg class="photo-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+        <svg class="photo-btn btn-left" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg class="photo-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+        <svg class="photo-btn btn-right" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
@@ -277,14 +302,14 @@
     </div>
 
     <div class="render">
-        <img src="src/images/render/render_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+        <img src="src/images/render/render_bg.jpg"  class="image-head" alt="photo_bg">
     </div>
     <div class="baguetteBoxThree gallery ">
-        <svg class="render-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+        <svg class="render-btn btn-left" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg class="render-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+        <svg class="render-btn btn-right" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
@@ -313,14 +338,14 @@
     </div>
 
     <div class="mirror">
-        <img src="src/images/mirror/mirror_bg.jpg" style="display: block;margin: 0 auto;"  alt="photo_bg">
+        <img src="src/images/mirror/mirror_bg.jpg"  class="image-head"  alt="photo_bg">
     </div>
     <div class="baguetteBoxFour gallery ">
-        <svg class="mirror-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+        <svg class="mirror-btn btn-left" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg class="mirror-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+        <svg class="mirror-btn btn-right" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
@@ -365,14 +390,14 @@
     </div>
 
     <div class="digital">
-        <img src="src/images/digital/digital_bg.jpg" style="display: block;margin: 0 auto;" alt="photo_bg">
+        <img src="src/images/digital/digital_bg.jpg"  class="image-head" alt="photo_bg">
     </div>
     <div class="baguetteBoxFive gallery " style="margin: 0;padding: 14px 0;">
-        <svg class="digital-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: left;position: relative;top: 70px;left: 10px;cursor: pointer;">
+        <svg class="digital-btn btn-left" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&lt;</polyline>
         </svg>
-        <svg class="digital-btn" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" style="float: right;position: relative;top: 70px;right: 10px;cursor: pointer;">
+        <svg class="digital-btn btn-right" width="40" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" >
             <polyline points="10 10 30 30 10 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"
                       stroke-linecap="butt" fill="none" stroke-linejoin="round">&gt;</polyline>
         </svg>
@@ -466,6 +491,8 @@
 <script src="lib/pages.js"></script>
 <script>
     window.onload = function () {
+        var myWidth = document.body.offsetWidth;
+        document.getElementById('image-wrapper').style.width = myWidth+"px";
         baguetteBox.run('.baguetteBoxOne', {
             animation: 'fadeIn'
         });
@@ -480,6 +507,11 @@
         });
         baguetteBox.run('.baguetteBoxFive', {
             animation: 'fadeIn'
+        });
+
+        $(window).resize(function() {
+            var myWidth = document.body.offsetWidth;
+            document.getElementById('image-wrapper').style.width = myWidth+"px";
         });
 
     };
