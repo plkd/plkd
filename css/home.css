@@ -49,9 +49,7 @@ table {
 
 /*导航条*/
 .nav{
-    /*position: fixed;*/
-    position: absolute;
-
+    position: relative;
     /*z-index: 2;*/
     width: 100%;
     z-index: 100;

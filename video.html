@@ -31,44 +31,47 @@
     <div id="banner_tabs" class="flexslider" >
         <ul class="slides">
             <li>
-                    <div class="video-window jieguangji">
-                        <div class="jieguangji-img" >
-                            <img alt="jieguangji" src="src/img/jieguangji_left.jpg">
-                        </div>
-                        <div class="jieguangji-play">
-                            <a target="_blank" href="https://player.vimeo.com/video/194624158"><img src="src/img/jieguangji_play.jpg" alt=""></a>
-                        </div>
-                        <div class="jieguangji-text" >
-                            <img src="src/img/jieguangji_text.png" alt="jieguangji-text">
-                        </div>
+                <div class="video-window jieguangji " id="jieguangji">
+                    <div class="jieguangji-img">
+                        <img alt="jieguangji" src="src/img/jieguangji_left.jpg">
                     </div>
+                    <div class="jieguangji-play">
+                        <a target="_blank" href="https://player.vimeo.com/video/194624158"><img
+                                src="src/img/jieguangji_play.jpg" alt=""></a>
+                    </div>
+                    <div class="jieguangji-text">
+                        <img src="src/img/jieguangji_text.png" alt="jieguangji-text">
+                    </div>
+                </div>
             </li>
             <li>
-                    <div class="video-window trace">
-                        <div class="trace-play">
-                            <a target="_blank" href="https://player.vimeo.com/video/192464930"><img src="src/img/trace_play.jpg" alt=""></a>
-                        </div>
-                        <div class="trace-text">
-                            <img src="src/img/trace_text.png" alt="trace-text">
-                        </div>
-                        <div class="trace-img">
-                            <img alt="trace" src="src/img/trace_left.jpg">
-                        </div>
+                <div class="video-window trace" id="trace">
+                    <div class="trace-play">
+                        <a target="_blank" href="https://player.vimeo.com/video/192464930"><img
+                                src="src/img/trace_play.jpg" alt=""></a>
+                    </div>
+                    <div class="trace-text">
+                        <img src="src/img/trace_text.png" alt="trace-text">
+                    </div>
+                    <div class="trace-img">
+                        <img alt="trace" src="src/img/trace_left.jpg">
+                    </div>
 
-                    </div>
+                </div>
             </li>
             <li>
-                    <div class="video-window cans">
-                        <div class="cans-play">
-                            <a target="_blank" href="https://player.vimeo.com/video/192601903"><img src="src/img/cans_play.jpg" alt=""></a>
-                        </div>
-                        <div class="cans-img">
-                            <img alt="cans" src="src/img/cans_left.jpg">
-                        </div>
-                        <div class="cans-text">
-                            <img src="src/img/cans_text.png" alt="cans-text">
-                        </div>
+                <div class="video-window cans" id="cans">
+                    <div class="cans-play">
+                        <a target="_blank" href="https://player.vimeo.com/video/192601903"><img
+                                src="src/img/cans_play.jpg" alt=""></a>
                     </div>
+                    <div class="cans-img">
+                        <img alt="cans" src="src/img/cans_left.jpg">
+                    </div>
+                    <div class="cans-text">
+                        <img src="src/img/cans_text.png" alt="cans-text">
+                    </div>
+                </div>
             </li>
         </ul>
 
@@ -81,7 +84,9 @@
     <footer class="page-footer teal">
         <div class="footer-copyright">
             <div class="container">
-                Design by <a class="brown-text text-lighten-3" href="http://baike.baidu.com/link?url=OUvFwEb3FHubL_KJGe4VnrbeCFIhrPfSAjm7GlpSr07cgGBfObYMYe7gUFdb7AlcpPAbxtQMekPhU3gUCMLBm1MCai1oeEU9oiH8FRaN7pwIBXTzuuMoowhE_shHH67UoNF-ewNuKdlVPxG8r8eAlPrd8TyKO5AeAYh8M6pmiWv9FatafWf78IwBFePOrwSB9sMiF6HNm1gGrossttwwEa">Teddy Peng | </a>  Made by <span class="brown-text text-lighten-3" >LJL</span>
+                Design by <a class="brown-text text-lighten-3"
+                             href="http://baike.baidu.com/link?url=OUvFwEb3FHubL_KJGe4VnrbeCFIhrPfSAjm7GlpSr07cgGBfObYMYe7gUFdb7AlcpPAbxtQMekPhU3gUCMLBm1MCai1oeEU9oiH8FRaN7pwIBXTzuuMoowhE_shHH67UoNF-ewNuKdlVPxG8r8eAlPrd8TyKO5AeAYh8M6pmiWv9FatafWf78IwBFePOrwSB9sMiF6HNm1gGrossttwwEa">Teddy
+                Peng | </a> Made by <span class="brown-text text-lighten-3">LJL</span>
             </div>
         </div>
     </footer>
@@ -91,27 +96,35 @@
 
 
 <script type="text/javascript">
-        $(function () {
-            var bannerSlider = new Slider($('#banner_tabs'), {
-                time: 5000,
-                delay: 400,
-                event: 'hover',
-                auto: true,
-                mode: 'fade',
-                controller: $('#bannerCtrl'),
-                activeControllerCls: 'active'
+            $(function () {
+                var myHeight = window.innerHeight;
+
+//                var myHeight = screen.height;
+                document.querySelector('.flexslider').style.height = myHeight+'px';
+                var bannerSlider = new Slider($('#banner_tabs'), {
+                    time: 5000,
+                    delay: 400,
+                    event: 'hover',
+                    auto: true,
+                    mode: 'faded',
+                    controller: $('#bannerCtrl'),
+                    activeControllerCls: 'active'
+                });
+                $('#banner_tabs .flex-prev').click(function () {
+                    bannerSlider.prev()
+                });
+                $('#banner_tabs .flex-next').click(function () {
+                    bannerSlider.next()
+                });
             });
-            $('#banner_tabs .flex-prev').click(function () {
-                bannerSlider.prev()
+            $(window).resize(function() {
+                var myHeight = window.innerHeight;
+//                var myHeight = screen.height;
+                document.querySelector('.flexslider').style.height = myHeight+'px';
             });
-            $('#banner_tabs .flex-next').click(function () {
-                bannerSlider.next()
-            });
-        });
+//            var height = document.
 
 </script>
 
-<!--<script src="lib/global.js"></script>-->
-<!--<script src="lib/home.js"></script>-->
 </body>
 </html>
