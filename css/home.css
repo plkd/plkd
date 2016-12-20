@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd, p {
     list-style: none;
     font-weight: 400;
 }
+h1 {
+    text-align: center;
+}
 img{
     /*display: block;*/
     vertical-align: top;
@@ -206,4 +209,108 @@ footer.page-footer .footer-copyright {
 }
 .brown-text.text-lighten-3 {
     color: #bcaaa4 !important;
+}
+
+/*
+    ps
+*/
+#self-intro{
+    background:#e5dbcf;
+    padding: 10px;
+    overflow: hidden;
+}
+#self-intro iframe{
+    float: left;
+    width: 50%;
+    margin: 2% 0;
+}
+#self-intro .self-intro-img{
+    width: 44%;float: right;margin:2% 2% 0 0;
+}
+#self-intro .self-intro-img img{
+    width: 100%;
+}
+
+#sample-real{
+    margin:5px auto;
+    width:800px;
+}
+.sample-real-text{
+    width: 400px;
+    margin: 0 auto;
+    line-height: 1.75;
+    font-weight: bold;
+}
+
+/*
+    images
+*/
+.gallery {
+    text-align: center;
+    margin:25px auto;
+    /*background: url(src/images/images_bg.jpg);*/
+    /*background:url(src/images/images_bg.jpg)  bottom;*/
+}
+
+.gallery img {
+    height: 250px;
+    transition: -webkit-filter .4s, filter .4s;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+.gallery img:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.gallery a {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 4px;
+    box-shadow: 0 0 4px -1px #000;
+}
+
+.gallery .cutter{
+    /*width: 1320px;*/
+    height:260px;
+    /*margin:5px auto;*/
+    overflow: hidden;
+}
+.gallery .cutter  .cutter-hidden {
+    width:0;
+    height:0;
+    display: none;
+    transition: all 1s ;
+}
+
+.image-head{
+    display: block;
+    margin: 0 auto;
+    width:100%;
+}
+.btn-left{
+    float: left;
+    position: relative;
+    top: 90px;
+    left: 10px;
+    cursor: pointer;
+}
+.btn-right{
+    float: right;
+    position: relative;
+    top: 90px;
+    right: 10px;
+    cursor: pointer;
+}
+#image-wrapper{
+    background-image:url(../src/images/images_bg.jpg);
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -moz-border-image: url(../src/images/images_bg.jpg) 0;
+    margin: 0 auto;
 }

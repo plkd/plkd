@@ -12,77 +12,14 @@
             font-family: sans-serif;
             margin: 0;
         }
-
         a, a:visited {
             color: #97B6D6;
             text-decoration: none;
-        }
-
-        .gallery {
-            text-align: center;
-            margin:25px auto;
-            /*background: url(src/images/images_bg.jpg);*/
-            /*background:url(src/images/images_bg.jpg)  bottom;*/
-        }
-
-        .gallery img {
-            height: 250px;
-            transition: -webkit-filter .4s, filter .4s;
-            filter: grayscale(0%);
-            -webkit-filter: grayscale(0%);
-        }
-
-        .gallery img:hover {
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-        }
-
-        .gallery a {
-            width: 250px;
-            height: 250px;
-            display: inline-block;
-            overflow: hidden;
-            margin: 4px;
-            box-shadow: 0 0 4px -1px #000;
-        }
-
-        .gallery .cutter{
-            /*width: 1320px;*/
-            height:260px;
-            /*margin:5px auto;*/
-            overflow: hidden;
-        }
-        .gallery .cutter  .cutter-hidden {
-            width:0;
-            height:0;
-            display: none;
-            transition: all 1s ;
-        }
-
-        .image-head{
-            display: block;
-            margin: 0 auto;
-            width:100%;
-        }
-        .btn-left{
-            float: left;
-            position: relative;
-            top: 90px;
-            left: 10px;
-            cursor: pointer;
-        }
-        .btn-right{
-            float: right;
-            position: relative;
-            top: 90px;
-            right: 10px;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
 <div class="header theme-white">
-
     <!--导航菜单开始-->
     <div class="nav clearfix">
         <div class="nav-wrapper">
@@ -90,10 +27,10 @@
                                                alt="touxiang"/></a></div>
             <div class="title"><a href="index.html" style="color: #494c4d;">Teddy Peng</a></div>
             <ul class="nav-link">
-                <li class=""><a href="ps.html">PERSONAL INTRODUCTION</a></li>
-                <li class=""><a id="videos" href="video.html">VIDEOS</a></li>
+                <li ><a href="ps.html">PERSONAL INTRODUCTION</a></li>
+                <li ><a id="videos" href="video.html">VIDEOS</a></li>
                 <li><a id="images" class="selected" href="images.html">IMAGES</a></li>
-                <li class=""><a id="others" href="others.html">OTHERS</a></li>
+                <li ><a id="others" href="others.html">OTHERS</a></li>
             </ul>
             <div class="language">
                 <span><a href="#">EN</a></span><span><a href="#">简体中文</a></span>
@@ -101,13 +38,7 @@
         </div>
     </div>
 <div style="
-  background-image:url(src/images/images_bg.jpg);
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-    -moz-border-image: url(src/images/images_bg.jpg) 0;
-    margin: 0 auto;" id="image-wrapper">
+  " id="image-wrapper">
     <!--sketches-->
     <div class="sketches" >
         <img src="src/images/sketches/sketches_bg.jpg"  class="image-head" alt="sketches_bg">
@@ -513,7 +444,6 @@
             var myWidth = document.body.offsetWidth;
             document.getElementById('image-wrapper').style.width = myWidth+"px";
         });
-
     };
 </script>
 </body>
