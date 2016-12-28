@@ -6,6 +6,9 @@ html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, b
 li{
     list-style: none;
 }
+h1{
+    text-align: center;
+}
 a{
     text-decoration: none;
     outline: 0;
@@ -163,9 +166,14 @@ h1{
 }
 
 .title a{
-    color: #73a9af;
+    color: #494c4d;
 }
+.title a:visited{
+    color: #494c4d;
+}
+
 .title a.selected{
+    color:#73a9af;
     text-decoration: underline;
 }
 
@@ -336,3 +344,7 @@ footer.page-footer .footer-copyright {
 
 img.show{ display: inline-block; -webkit-animation-name: slideIn;}
 img.hide{ -webkit-animation-name: slideOut;}
+
+.ps-img{
+    width:100%;
+}
