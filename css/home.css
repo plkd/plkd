@@ -283,7 +283,6 @@ footer.page-footer .footer-copyright {
     width:0;
     height:0;
     display: none;
-    transition: all 1s ;
 }
 
 .image-head{
@@ -314,3 +313,26 @@ footer.page-footer .footer-copyright {
     -moz-border-image: url(../src/images/images_bg.jpg) 0;
     margin: 0 auto;
 }
+
+
+/*
+    animation
+*/
+@-webkit-keyframes slideIn{
+    0%{left: 500px;
+        width:0;
+    }
+    100%{left: 0;
+    }
+}
+
+@-webkit-keyframes slideOut{
+    0%{left: 0;}
+    100%{left: 500px;
+        display: none;
+        width:0;
+    }
+}
+
+img.show{ display: inline-block; -webkit-animation-name: slideIn;}
+img.hide{ -webkit-animation-name: slideOut;}
